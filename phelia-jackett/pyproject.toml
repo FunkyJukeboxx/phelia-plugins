@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phelia_jackett"
+version = "0.1.0"
+description = "Jackett connector plugin for Phelia (Torznab search provider)"
+authors = [{ name = "Erik", email = "dev@example.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27.0"]
+
+[project.urls]
+Homepage = "https://github.com/yourorg/phelia-plugins"
+
+[project.entry-points]
+# Loader will import "module:Class"
+# Keep it exactly as below so your core can import it by entry_point string.
+phelia_plugin = { "phelia_jackett" = "phelia_jackett:Plugin" }
+
